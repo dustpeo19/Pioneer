@@ -1,10 +1,6 @@
-html{
-    background-color:white;
-}
 body {
     font-family: 'NanumSquare', sans-serif;
-    line-height: 1.5;
 }
-h1 {
-    font-size:20px;
+.jumbotron {
+    padding: 0;
 }
