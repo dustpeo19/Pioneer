@@ -35,7 +35,8 @@ img{
     color:black;
 }
 a:hover{
-    text-decoration:underline;
+    text-decoration:none;
+    color:black;
 }
 :visited{
     color:black;

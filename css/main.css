@@ -4,3 +4,7 @@ body {
 .jumbotron {
     padding: 0;
 }
+a:hover{
+    text-decoration:none;
+    color:black;
+}
