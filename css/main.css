@@ -1,5 +1,9 @@
 body {
     font-family: 'NanumSquare', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+.container {
+    padding: 0;
 }
 .jumbotron {
     padding: 0;
@@ -7,4 +11,91 @@ body {
 a:hover{
     text-decoration:none;
     color:black;
+}
+/* index.html */
+    /* header */
+header {
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    padding: 80px;
+    transition: .3s ease-in-out;
+}
+.header_logo {
+    align-items: center;
+    color: rgb(22,22,22);
+}
+.header_logo p {
+    transition: .3s;
+    width: 100px;
+    height: 70px;
+    background: url(../img/logo/logo.png) no-repeat center top /cover;
+    text-indent: -9999px;
+    border-radius: 10px;
+}
+.header_menuicon li a{
+    transition: .2s;
+    font-size: 20px;
+    width: 200px;
+    color: rgba(32,32,32,.7);
+    /* background-color: rgba(20,20,20,.3); */
+    border-radius: 25px;
+    padding: 13px 0 10px 10px;
+}
+header.shrink {
+    padding: 10px 50px;
+    background-color: #fff;
+    z-index: 1;
+}
+header.shrink .header_logo p {
+    width: 80px;
+    height: 56px;
+}
+header.shrink .header_menuicon {
+    background-color: transparent;
+}
+.header_menuicon li a:hover{
+    color: black;
+}
+    /* pre-main */
+.head_img_wrapper {
+    height:600px;
+    background: url(../img/books.jpg) no-repeat center top /cover;
+    border-radius: 0;
+}
+.head_img {
+    position: absolute;
+    top: 330px;
+    left: 280px;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 50px;
+    letter-spacing: 1px;
+}
+    /* main */
+.menu_wrapper {
+    margin-bottom: 50px;
+}
+.menu_wrapper img {
+    border-radius: 20px;
+    border: 2px solid #ddd;
+}
+.menu_wrapper div:first-child {
+    margin-top: -60px;
+}
+.menu_wrapper div:nth-child(2) {
+    margin-top: 0px;
+}
+.menu_wrapper div:last-child {
+    margin-top: 60px;
+}
+
+    /* footer */
+.footer_wrapper {
+    height: 300px;
+    background-color: #bbb;
+    margin-bottom: 0;
+    border-radius: 0;
+    padding: 70px;
 }
