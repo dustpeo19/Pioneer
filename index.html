@@ -23,26 +23,43 @@
 <body>
     <div class="wrapper">
         <header id="main-header" class="d-flex justify-content-between">
-            <a href="index.html" class="header_logo d-flex">
+            <a href="index.html" class="header-logo d-flex">
                 <p class="m-0">logo</p>
-                <h5 class="my-0 p-3 fontmg m-0 font-weight-bold">ELEC10 Pioneer Project.</h5>
+                <h5 class="p-3 m-0 font-weight-bold">ELEC10 Pioneer Project.</h5>
             </a>
-            <ul class="header_menuicon row m-0">
-                <li class="search col">
+            <ul class="header-menuicon m-0 row">
+                <li id="search-modal-btn" class="col">
                     <a href="#"><i class="fas fa-search"></i></a>
                 </li>
-                <li class="user col">
+                <li id="user-modal-btn" class="col">
                     <a href="#"><i class="fas fa-user"></i></a>
                 </li>
-                <li class="menubar col">
+                <li id="nav-modal-btn" class="col">
                     <a href="#"><i class="fas fa-bars"></i></a>
                 </li>
             </ul>
             <script src="js/header-shrink.js"></script>
         </header>
-        <section class="head_img_wrapper jumbotron my-0">
+
+        <div class="modals">
+            <div class="modals-content">
+                <div class="modals-close"><i class="fas fa-times"></i></div>
+                <form action="#" method="post">
+                    <p><i class="fas fa-user"></i></p>
+                    <h2>LOG-IN</h2>
+                    <input type="text" class="form-control" name="login_id" placeholder="ID">
+                    <input type="password" class="form-control" name="login_pw" placeholder="PW">
+                    <button type="submit" class="btn btn-primary loginbtn">로그인</button>
+                </form>
+            </div>
+            <script src="js/modal.js"></script>
+        </div>
+        <!-- <div class="modals search-modal"></div>
+        <div class="modals nav-modal"></div> -->
+        
+        <div class="head_img_wrapper jumbotron my-0">
             <p class="head_img">" Start your new life in Yonsei "</p>
-        </section>
+        </div>
         <main>
             <div class="container">
                 <div class="grid d-flex justify-content-between">
@@ -51,7 +68,7 @@
                         <figcaption>
                             <h2>
                                 passionate 
-                                <span>Julia</span>
+                                <span>Tutoring</span>
                             </h2>
                             <div>
                                 <p>Julia dances in the deep dark</p>
@@ -62,11 +79,11 @@
                         </figcaption>
                     </figure>
                     <figure class="effect-julia">
-                        <img src="img/collaboration.jpg" alt="collaboration">
+                        <img src="img/study.jpg" alt="collaboration">
                         <figcaption>
                             <h2>
                                 passionate 
-                                <span>Julia</span>
+                                <span>Study</span>
                             </h2>
                             <div>
                                 <p>Julia dances in the deep dark</p>
@@ -78,9 +95,9 @@
                     </figure>
                 </div>
             </div>
-
-            <div class="container" style="clear: both;">
-                <div class="menu_wrapper row1 d-flex">
+            <div class="container" style="clear: both; position: relative;">
+                <p class="walking"><i class="fas fa-walking"></i></p>
+                <div class="menu_wrapper_under_julia row1 d-flex">
                     <div class="p-2">
                         <img src="img/collaboration.jpg" alt="collaboration" class="img-fluid shadow-lg">
                     </div>
@@ -92,7 +109,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="jumbotron my-0">
                 <div class="row1 d-flex">
                     <div class="">
@@ -109,7 +125,7 @@
         </main>
         <footer>
             <div class="footer_wrapper jumbotron">
-                ddddd
+                footer
             </div>
         </footer>
     </div>
