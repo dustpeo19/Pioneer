@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ELEC10 PIONEER PROJECT</title>
+    <!-- fonts -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <!-- others -->
 	<link rel="shortcut icon" href="img/logo/fav_128.png" type="image/x-icon">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -41,10 +44,10 @@
             <script src="js/header-shrink.js"></script>
         </header>
 
-        <div class="modals">
-            <div class="modals-content">
-                <div class="modals-close"><i class="fas fa-times"></i></div>
-                <form action="#" method="post">
+        <div class="mainmodal">
+            <div class="mainmodal-content">
+                <div class="mainmodal-close">&times;</div>
+                <form action="process_login.php" method="post">
                     <p><i class="fas fa-user"></i></p>
                     <h2>LOG-IN</h2>
                     <input type="text" class="form-control" name="login_id" placeholder="ID">
@@ -52,10 +55,11 @@
                     <button type="submit" class="btn btn-primary loginbtn">로그인</button>
                 </form>
             </div>
-            <script src="js/modal.js"></script>
         </div>
-        <!-- <div class="modals search-modal"></div>
-        <div class="modals nav-modal"></div> -->
+        <div id="overlay"></div>
+        <!-- <div class="mainmodal search-modal"></div>
+        <div class="mainmodal nav-modal"></div> -->
+
         
         <div class="head_img_wrapper jumbotron my-0">
             <p class="head_img">" Start your new life in Yonsei "</p>
@@ -109,6 +113,26 @@
                     </div>
                 </div>
             </div>
+            
+
+            <h2>Modal Example</h2>
+
+            <!-- Trigger/Open The Modal -->
+            <button id="myBtn">Open Modal</button>
+            
+            <!-- The Modal -->
+            <div id="myModal" class="modals">
+            
+              <!-- Modal content -->
+              <div class="modals-content">
+                <span class="close">&times;</span>
+                <p>Some text in the Modal..</p>
+              </div>
+            
+            </div>
+    
+            <script src="js/modal.js"></script>
+
             <div class="jumbotron my-0">
                 <div class="row1 d-flex">
                     <div class="">

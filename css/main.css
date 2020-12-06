@@ -12,7 +12,9 @@ a:hover{
     text-decoration:none;
     color:black;
 }
+
 /* index.html */
+
     /* header */
 header {
     position: fixed;
@@ -38,7 +40,6 @@ header {
     font-size: 20px;
     width: 200px;
     color: rgba(32,32,32,.7);
-    /* background-color: rgba(20,20,20,.3); */
     border-radius: 25px;
     padding: 13px 0 10px 10px;
 }
@@ -57,45 +58,50 @@ header.shrink .header_logo p {
 header.shrink .header_menuicon {
     background-color: transparent;
 }
+
     /* modal */
-.modals {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,.7);
+.mainmodal {
     position: fixed;
-    top: 0;
+    top: 30px;
+    right: 0;
     display: none;
-    justify-content: flex-end;
-    transition: .3s;
-    z-index: 1;
-}
-.modals-content {
-    margin-top: 50px;
-    padding: 40px;
-    width: 400px;
-    height: 500px;
-    background-color: #fff;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    z-index: 10;
+    background-color: #fff;
+    width: 400px;
+    height: 500px;
+    animation-name: animate-right;
+    animation-duration: 0.4s;
+}
+.mainmodal-content {
+    position: relative;
+    padding: 40px;
     color: #000;
     text-align: center;
 }
-.modals-content .modals-close {
+@keyframes animate-right {
+    from {right: -300px; opacity: 0}
+    to {right: 0; opacity: 1}
+}
+.mainmodal-content .mainmodal-close {
     position: absolute;
     margin-top: -20px;
-    margin-left: -15px;
-    font-size: 20px;
+    margin-left: -10px;
+    font-size: 30px;
+    font-weight: bold;
     opacity: .7;
     cursor: pointer;
 }
-.modals-content form p {
+.mainmodal-content form p {
     padding: 20px 0;
     font-size: 22px;
 }
-.modals-content form h2 {
+.mainmodal-content form h2 {
     font-weight: bold;
 }
-.modals-content form input {
+.mainmodal-content form input {
+    font-family: 'Nanum Gothic', sans-serif;
     width: 90%;
     height: 50px;
     display: block;
@@ -112,6 +118,22 @@ header.shrink .header_menuicon {
     border-radius: 25px;
     font-size: 18px;
 }
+#overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgba(0,0,0,.7);
+    z-index: 5;
+    pointer-events: none;
+}
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
     /* pre-main */
 .head_img_wrapper {
     height:600px;
@@ -128,6 +150,7 @@ header.shrink .header_menuicon {
     font-size: 50px;
     letter-spacing: 1px;
 }
+
     /* main */
 .menu_wrapper_under_julia {
     margin-bottom: 50px;
@@ -151,6 +174,7 @@ header.shrink .header_menuicon {
     font-size: 60px;
     color: rgb(48, 152, 201);
 }
+
     /* footer */
 .footer_wrapper {
     height: 300px;
