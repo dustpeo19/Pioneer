@@ -31,7 +31,7 @@ header {
     transition: .3s;
     width: 100px;
     height: 70px;
-    background: url(../img/logo/logo.png) no-repeat center top /cover;
+    background: url(../../img/logo/logo.png) no-repeat center top /cover;
     text-indent: -9999px;
     border-radius: 10px;
 }
@@ -60,47 +60,16 @@ header.shrink .header_menuicon {
 }
 
     /* modal */
-.mainmodal {
-    position: fixed;
-    top: 30px;
-    right: 0;
-    display: none;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    z-index: 10;
-    background-color: #fff;
-    width: 400px;
-    height: 500px;
-    animation-name: animate-right;
-    animation-duration: 0.4s;
-}
-.mainmodal-content {
-    position: relative;
-    padding: 40px;
-    color: #000;
+.modal-content form p {
+    padding: 15px 0;
+    font-size: 22px;
     text-align: center;
 }
-@keyframes animate-right {
-    from {right: -300px; opacity: 0}
-    to {right: 0; opacity: 1}
-}
-.mainmodal-content .mainmodal-close {
-    position: absolute;
-    margin-top: -20px;
-    margin-left: -10px;
-    font-size: 30px;
+.modal-content form h2 {
     font-weight: bold;
-    opacity: .7;
-    cursor: pointer;
+    text-align: center;
 }
-.mainmodal-content form p {
-    padding: 20px 0;
-    font-size: 22px;
-}
-.mainmodal-content form h2 {
-    font-weight: bold;
-}
-.mainmodal-content form input {
+.modal-content form input {
     font-family: 'Nanum Gothic', sans-serif;
     width: 90%;
     height: 50px;
@@ -112,11 +81,32 @@ header.shrink .header_menuicon {
     background-color: #ddd;
     color: black;
 }
-.loginbtn {
+.modal-content .loginbtn {
+    margin: 0px 15.2px 30px;
+    padding: 0;
     width: 90%;
     height: 50px;
     border-radius: 25px;
     font-size: 18px;
+}
+.modal-content .button-wrap {
+    margin: 0 15.2px 30px;
+}
+.modal-content .join-link {
+    margin: 0;
+    padding: 0;
+    width: 40%;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+.modal-content .forgetpw-link {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 15px;
 }
 #overlay {
     position: fixed;
@@ -137,7 +127,7 @@ header.shrink .header_menuicon {
     /* pre-main */
 .head_img_wrapper {
     height:600px;
-    background: url(../img/books.jpg) no-repeat center top /cover;
+    background: url(../../img/books.jpg) no-repeat center top /cover;
     border-radius: 0;
 }
 .head_img {

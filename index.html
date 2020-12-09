@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>ELEC10 PIONEER PROJECT</title>
     <!-- fonts -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
@@ -11,16 +12,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <!-- others -->
 	<link rel="shortcut icon" href="img/logo/fav_128.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/my/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/julia.css">
+    <!-- MDB template -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <!-- my css -->
+    <link rel="stylesheet" href="css/my/style.css">
+    <link rel="stylesheet" href="css/my/julia.css">
+    <!-- script -->
     <script src="https://kit.fontawesome.com/50d723c333.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> -->
     <style>
-        
     </style>
 </head>
 <body>
@@ -35,16 +42,35 @@
                     <a href="#"><i class="fas fa-search"></i></a>
                 </li>
                 <li id="user-modal-btn" class="col">
-                    <a href="#"><i class="fas fa-user"></i></a>
+                    <a href="#" data-toggle="modal" data-target="#sideModalTR"><i class="fas fa-user"></i></a>
                 </li>
                 <li id="nav-modal-btn" class="col">
                     <a href="#"><i class="fas fa-bars"></i></a>
                 </li>
             </ul>
-            <script src="js/header-shrink.js"></script>
+            <script src="js/my/header-shrink.js"></script>
         </header>
 
-        <div class="mainmodal">
+        <!-- modal -->
+        <div class="modal fade right" id="sideModalTR" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+            <div class="modal-dialog modal-side modal-top-right" role="document">
+                <div class="modal-content">
+                    <form action="process_login.php" method="post" class="p-5">
+                        <p><i class="fas fa-user"></i></p>
+                        <h2>LOG-IN</h2>
+                        <input type="text" class="form-control" name="login_id" placeholder="ID">
+                        <input type="password" class="form-control" name="login_pw" placeholder="PW">
+                        <button type="submit" class="btn btn-primary loginbtn">로그인</button>
+                        <div class="button-wrap d-flex justify-content-between">
+                            <button type="button" class="btn btn-secondary join-link" onclick="#">회원가입</button>
+                            <button type="button" class="btn btn-info forgetpw-link" onclick="#">비밀번호 찾기</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="mainmodal">
             <div class="mainmodal-content">
                 <div class="mainmodal-close">&times;</div>
                 <form action="process_login.php" method="post">
@@ -57,6 +83,7 @@
             </div>
         </div>
         <div id="overlay"></div>
+        <script src="js/my/modal.js"></script> -->
         <!-- <div class="mainmodal search-modal"></div>
         <div class="mainmodal nav-modal"></div> -->
 
@@ -99,6 +126,7 @@
                     </figure>
                 </div>
             </div>
+            
             <div class="container" style="clear: both; position: relative;">
                 <p class="walking"><i class="fas fa-walking"></i></p>
                 <div class="menu_wrapper_under_julia row1 d-flex">
@@ -113,26 +141,6 @@
                     </div>
                 </div>
             </div>
-            
-
-            <h2>Modal Example</h2>
-
-            <!-- Trigger/Open The Modal -->
-            <button id="myBtn">Open Modal</button>
-            
-            <!-- The Modal -->
-            <div id="myModal" class="modals">
-            
-              <!-- Modal content -->
-              <div class="modals-content">
-                <span class="close">&times;</span>
-                <p>Some text in the Modal..</p>
-              </div>
-            
-            </div>
-    
-            <script src="js/modal.js"></script>
-
             <div class="jumbotron my-0">
                 <div class="row1 d-flex">
                     <div class="">
@@ -153,5 +161,10 @@
             </div>
         </footer>
     </div>
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
 </body>
 </html>
