@@ -72,6 +72,9 @@ header.shrink .header-logo h5 {
 header.shrink .header-menuicon li a{
     color: rgba(32,32,32,.7);
 }
+header.shrink .header-menuicon li a:hover{
+    color: rgba(195, 0, 255, 0.7);
+}
 
     /* modal */
 .close {
